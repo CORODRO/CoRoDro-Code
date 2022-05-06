@@ -1,4 +1,4 @@
-# CoRoDro -- Rover Code
+# CoRoDro -- Code
 Hello! We are the CoRoDro team! We partecipate at the IGLUNA FC during 2021. 
 If you fancy knowing more about our tests check this out: https://www.youtube.com/watch?v=HWYhED8Z17Y.
 
