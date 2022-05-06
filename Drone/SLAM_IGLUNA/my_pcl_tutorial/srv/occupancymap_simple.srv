@@ -1,0 +1,6 @@
+string file_in
+string file_out
+string frame_id
+float64 resolution
+---
+
