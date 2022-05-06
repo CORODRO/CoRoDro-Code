@@ -15,7 +15,7 @@ If you use the code in this repository for your work, ke kindly as you to cite:
   year={2021}
 }
 ```
-If your work focus more on the task planner and state machine, then please cite:
+If your work focus more on the **task planner and state machine**, then please cite:
 ```
 @article{rimani2021application,
   title={Application of a hierarchical task planner to a lunar lava tube analogue robotic mission},
