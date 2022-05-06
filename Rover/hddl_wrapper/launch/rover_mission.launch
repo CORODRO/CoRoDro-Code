@@ -1,0 +1,30 @@
+
+
+<launch>
+
+<!--node name="move_to" pkg="move_to" type="move_to" output="screen">
+    <remap from="cmd_vel" to="cmd_vel"/>
+</node-->
+
+<node pkg="topic_tools" type="mux" name="mux_cmd_vel" respawn="true" respawn_delay="3"
+  args='/robot/motionvw
+    /move_to/cmd_vel
+    /stop/cmd_vel
+    /follow/cmd_vel mux:=mux_cmd_vel'
+/>
+
+<node pkg="rostopic" type="rostopic" name="pub_test_follow" args="pub /follow/cmd_vel  geometry_msgs/Twist '{linear:  {x: 0.2, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.2}}' -r10" output="screen"/>
+
+<node pkg="rostopic" type="rostopic" name="pub_stop_cmd_vel" args="pub /stop/cmd_vel  geometry_msgs/Twist '{linear:  {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}' -r10" output="screen"/>
+
+<node name="hddl_wrapper_ros" pkg="hddl_wrapper" type="hddl_rover_ros_wrapper.py" output="screen" >
+
+<param name="dx_map" value="15" />
+<param name="dy_map" value="11" />
+<param name="x_origin" value="-5.97" />
+<param name="y_origin" value="-2.76" />
+<param name="resolution_map" value="1" />
+
+</node>
+
+</launch>

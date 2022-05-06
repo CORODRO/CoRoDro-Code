@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="output" default="screen"/>
+  <arg name="map_file"/>
+
+<!--CHANGE MANUALLY FILE ADRESS -->
+  <node name="map_server"
+        pkg="map_server"
+        type="map_server"
+        args="/root/database/test_27_2021-06-25_10-02-29/100p_2d_final_map.yaml"
+        output="$(arg output)"/>
+
+        <!--node name="map_publisher" pkg="my_pcl_tutorial" type="map_pub_pcl" output="screen">
+<param name="occupancy_map_filename" value ="/root/database/MONDAY/occupancy.txt"/>
+<param name="topic_out" value ="/map"/>
+</node-->
+
+
+  <!--node name="amcl"
+        pkg="amcl"
+        type="amcl"
+        clear_params="true"
+        output="$(arg output)">
+    <rosparam command="load" file="$(find leo_navigation)/config/amcl.yaml"/>
+    <remap from="tf" to "tf_out"/>
+  </node-->
+        <arg name="marker_size" default="20" />
+        <arg name="max_new_marker_error" default="0.08" />
+        <arg name="max_track_error" default="0.2" />
+
+        <arg name="cam_image_topic" default="/D435/color/image_raw" />
+        <arg name="cam_info_topic" default="/D435/color/camera_info" />
+
+        <arg name="output_frame" default="T265_odom_frame" />
+<arg name="bundle_files" default="$(find my_pcl_tutorial)/bundles/final_box_1.xml $(find my_pcl_tutorial)/bundles/final_box_2.xml $(find my_pcl_tutorial)/bundles/final_box_3.xml $(find my_pcl_tutorial)/bundles/final_box_4.xml $(find my_pcl_tutorial)/bundles/final_box_5.xml $(find my_pcl_tutorial)/bundles/final_box_6.xml $(find my_pcl_tutorial)/bundles/final_box_7.xml $(find my_pcl_tutorial)/bundles/final_box_8.xml $(find my_pcl_tutorial)/bundles/final_box_9.xml $(find my_pcl_tutorial)/bundles/final_box_10.xml $(find my_pcl_tutorial)/bundles/final_box_11.xml $(find my_pcl_tutorial)/bundles/final_box_12.xml $(find my_pcl_tutorial)/bundles/final_box_13.xml $(find my_pcl_tutorial)/bundles/final_box_14.xml $(find my_pcl_tutorial)/bundles/final_box_15.xml $(find my_pcl_tutorial)/bundles/final_box_16.xml $(find my_pcl_tutorial)/bundles/final_box_17.xml $(find my_pcl_tutorial)/bundles/final_box_18.xml $(find my_pcl_tutorial)/bundles/final_box_19.xml $(find my_pcl_tutorial)/bundles/final_box_20.xml $(find my_pcl_tutorial)/bundles/final_box_21.xml $(find my_pcl_tutorial)/bundles/final_box_22.xml $(find my_pcl_tutorial)/bundles/final_box_23.xml" />
+
+<node name="ar_track_alvar" pkg="ar_track_alvar" type="findMarkerBundlesNoKinect" respawn="false" output="screen" args="$(arg marker_size) $(arg max_new_marker_error) $(arg max_track_error) $(arg cam_image_topic) $(arg cam_info_topic) $(arg output_frame) $(arg bundle_files)" />
+
+        <node name="ar_saver" pkg="my_pcl_tutorial" output="screen" type="ar_tracker_pcl">
+        <param name="topic_in" value="/ar_pose_marker"/>
+
+<!--CHANGE MANUALLY FILE ADRESS -->
+
+        <param name="filename" value="/root/database/test_27_2021-06-25_10-02-29/roverdatabase.txt"/>
+        </node>
+
+
+
+</launch>
+
+
+
+

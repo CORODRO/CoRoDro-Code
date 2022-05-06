@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="output" default="screen"/>
+  <arg name="map_file"/>
+ 
+  <node name="map_server"
+        pkg="map_server"
+        type="map_server"
+        args="/root/database/MONDAY/occupancy.yaml"
+        output="$(arg output)"/>
+
+        <!--node name="map_publisher" pkg="my_pcl_tutorial" type="map_pub_pcl" output="screen">
+<param name="occupancy_map_filename" value ="/root/database/MONDAY/occupancy.txt"/>
+<param name="topic_out" value ="/map"/>
+</node-->
+
+
+  <node name="amcl"
+        pkg="amcl"
+        type="amcl"
+        clear_params="true"
+        output="$(arg output)">
+    <rosparam command="load" file="$(find leo_navigation)/config/amcl.yaml"/>
+  </node>
+</launch>

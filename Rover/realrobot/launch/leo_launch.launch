@@ -1,0 +1,13 @@
+
+<launch>
+	<node pkg="tf" type="static_transform_publisher" name="node_tf_laserTobaselink" args="0.04 0 0.0 0 0 0 1 base_link laser 100" />
+	<node pkg="tf" type="static_transform_publisher" name="node_tf_imuTobaselink" args="0.8 0 0.2 0 0 0 1 base_link imu 100" />
+        <node pkg="tf" type="static_transform_publisher" name="node_tf_baselinkToRealSenseT265" args="-0.10 0 -0.21  0 0 0 1 T265_pose_frame base_link 100" />
+        <node pkg="tf" type="static_transform_publisher" name="node_tf_RealSensedepthD435Tobaselink" args="0.08 0 0.16  0 0 0 1 base_link D435_link 100" />
+        <node pkg="topic_tools" type="throttle" name="throttle_scan" args="messages /scan 2.0 /throttle/scan" />
+        <node pkg="topic_tools" type="throttle" name="throttle_odom" args="messages /T265/odom/sample 5.0 /throttle/odom" />
+
+
+
+
+</launch>
