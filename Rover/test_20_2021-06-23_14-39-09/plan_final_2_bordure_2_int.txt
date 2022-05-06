@@ -1,0 +1,111 @@
+waypoint2 - waypoint
+waypoint0 - waypoint
+waypoint14 - waypoint
+waypoint17 - waypoint
+waypoint19 - waypoint
+waypoint18 - waypoint
+waypoint26 - waypoint
+waypoint0_6_1 - waypoint
+waypoint1_3_1 - waypoint
+waypoint1_3_2 - waypoint
+waypoint1_6_1 - waypoint
+waypoint3_4_1 - waypoint
+waypoint3_5_1 - waypoint
+waypoint3_5_2 - waypoint
+
+objective13 - objective
+objective4 - objective
+objective6 - objective
+objective10 - objective
+objective7 - objective
+objective14 - objective
+objective12 - objective
+
+(can_traverse rover0 waypoint2 waypoint0_3_1)
+(can_traverse rover0 waypoint0_3_1 waypoint2)
+(can_traverse rover0 waypoint0_3_1 waypoint17)
+(can_traverse rover0 waypoint17 waypoint0_3_1)
+(can_traverse rover0 waypoint2 waypoint0_4_1)
+(can_traverse rover0 waypoint0_4_1 waypoint2)
+(can_traverse rover0 waypoint0_4_1 waypoint19)
+(can_traverse rover0 waypoint19 waypoint0_4_1)
+(can_traverse rover0 waypoint2 waypoint0_5_1)
+(can_traverse rover0 waypoint0_5_1 waypoint2)
+(can_traverse rover0 waypoint0_5_1 waypoint18)
+(can_traverse rover0 waypoint18 waypoint0_5_1)
+(can_traverse rover0 waypoint2 waypoint0_6_1)
+(can_traverse rover0 waypoint0_6_1 waypoint2)
+(can_traverse rover0 waypoint0_6_1 waypoint26)
+(can_traverse rover0 waypoint26 waypoint0_6_1)
+(can_traverse rover0 waypoint0 waypoint1_3_1)
+(can_traverse rover0 waypoint1_3_1 waypoint0)
+(can_traverse rover0 waypoint1_3_1 waypoint1_3_2)
+(can_traverse rover0 waypoint1_3_2 waypoint1_3_1)
+(can_traverse rover0 waypoint1_3_2 waypoint17)
+(can_traverse rover0 waypoint17 waypoint1_3_2)
+(can_traverse rover0 waypoint0 waypoint1_4_1)
+(can_traverse rover0 waypoint1_4_1 waypoint0)
+(can_traverse rover0 waypoint1_4_1 waypoint19)
+(can_traverse rover0 waypoint19 waypoint1_4_1)
+(can_traverse rover0 waypoint0 waypoint1_5_1)
+(can_traverse rover0 waypoint1_5_1 waypoint0)
+(can_traverse rover0 waypoint1_5_1 waypoint18)
+(can_traverse rover0 waypoint18 waypoint1_5_1)
+(can_traverse rover0 waypoint0 waypoint1_6_1)
+(can_traverse rover0 waypoint1_6_1 waypoint0)
+(can_traverse rover0 waypoint1_6_1 waypoint26)
+(can_traverse rover0 waypoint26 waypoint1_6_1)
+(can_traverse rover0 waypoint14 waypoint2_3_1)
+(can_traverse rover0 waypoint2_3_1 waypoint14)
+(can_traverse rover0 waypoint2_3_1 waypoint17)
+(can_traverse rover0 waypoint17 waypoint2_3_1)
+(can_traverse rover0 waypoint17 waypoint3_4_1)
+(can_traverse rover0 waypoint3_4_1 waypoint17)
+(can_traverse rover0 waypoint3_4_1 waypoint19)
+(can_traverse rover0 waypoint19 waypoint3_4_1)
+(can_traverse rover0 waypoint17 waypoint3_5_1)
+(can_traverse rover0 waypoint3_5_1 waypoint17)
+(can_traverse rover0 waypoint3_5_1 waypoint3_5_2)
+(can_traverse rover0 waypoint3_5_2 waypoint3_5_1)
+(can_traverse rover0 waypoint3_5_2 waypoint18)
+(can_traverse rover0 waypoint18 waypoint3_5_2)
+(can_traverse rover0 waypoint17 waypoint3_6_1)
+(can_traverse rover0 waypoint3_6_1 waypoint17)
+(can_traverse rover0 waypoint3_6_1 waypoint26)
+(can_traverse rover0 waypoint26 waypoint3_6_1)
+
+(can_traverse drone1 waypoint2 waypoint0_6_1)
+(can_traverse drone1 waypoint0_6_1 waypoint2)
+(can_traverse drone1 waypoint0_6_1 waypoint26)
+(can_traverse drone1 waypoint26 waypoint0_6_1)
+(can_traverse drone1 waypoint0 waypoint1_3_1)
+(can_traverse drone1 waypoint1_3_1 waypoint0)
+(can_traverse drone1 waypoint1_3_1 waypoint17)
+(can_traverse drone1 waypoint17 waypoint1_3_1)
+(can_traverse drone1 waypoint0 waypoint1_6_1)
+(can_traverse drone1 waypoint1_6_1 waypoint0)
+(can_traverse drone1 waypoint1_6_1 waypoint26)
+(can_traverse drone1 waypoint26 waypoint1_6_1)
+(can_traverse drone1 waypoint17 waypoint3_4_1)
+(can_traverse drone1 waypoint3_4_1 waypoint17)
+(can_traverse drone1 waypoint3_4_1 waypoint19)
+(can_traverse drone1 waypoint19 waypoint3_4_1)
+(can_traverse drone1 waypoint17 waypoint3_5_1)
+(can_traverse drone1 waypoint3_5_1 waypoint17)
+(can_traverse drone1 waypoint3_5_1 waypoint18)
+(can_traverse drone1 waypoint18 waypoint3_5_1)
+
+(visible_from objective13 waypoint2 rover0)
+(visible_from objective4 waypoint0 rover0)
+(visible_from objective6 waypoint14 rover0)
+(visible_from objective10 waypoint17 rover0)
+(visible_from objective7 waypoint19 rover0)
+(visible_from objective14 waypoint18 rover0)
+(visible_from objective12 waypoint26 rover0)
+(visible_from objective13 waypoint2 drone1)
+(visible_from objective4 waypoint0 drone1)
+(visible_from objective6 waypoint14 drone1)
+(visible_from objective10 waypoint17 drone1)
+(visible_from objective7 waypoint19 drone1)
+(visible_from objective14 waypoint18 drone1)
+(visible_from objective12 waypoint26 drone1)

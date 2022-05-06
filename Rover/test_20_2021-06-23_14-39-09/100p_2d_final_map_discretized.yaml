@@ -1,0 +1,7 @@
+image: /root/database/test_20_2021-06-23_14-39-09/100p_2d_final_map_discretized.pgm
+resolution: 0.320000
+origin: [-4.931185, -4.850833, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

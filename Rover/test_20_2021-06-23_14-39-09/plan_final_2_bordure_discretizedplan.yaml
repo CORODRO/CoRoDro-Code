@@ -1,0 +1,7 @@
+image: /root/database/test_20_2021-06-23_14-39-09/plan_final_2_bordure_discretizedplan.pgm
+resolution: 1.040000
+origin: [-2.851000, -2.771000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
