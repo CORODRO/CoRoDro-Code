@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+
+
+<!--node to visualize state machine /-->
+<node name="smach_viewer" pkg="smach_viewer" type="smach_viewer.py" />
+
+<!--node to launch state machine /-->
+<!--node name="mapping_state_machine" pkg="state_machines" type="MappingStateMachine.py"-->
+<!--where are all the nodes? /-->
+<!--param name="launch_package"  value="my_pcl_tutorial"/>
+<param name="launch_file_name"  value="outside_D.launch"/>
+<param name="input_to_pointcloud_to_pcd"  value="/topic_name"/-->
+<!--/node-->
+
+
+
+</launch>

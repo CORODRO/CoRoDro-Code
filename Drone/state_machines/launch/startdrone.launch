@@ -1,0 +1,13 @@
+<?xml version="1.0"?> 
+<launch>
+	<include file="$(find mavros)/launch/px4.launch">
+		<arg name="fcu_url" value="/dev/ttySAC0:921600" />
+	</include>
+
+        <include file="$(find vision_to_mavros)/launch/t265_tf_to_mavros.launch"/>
+
+	<include file="$(find my_pcl_tutorial)/launch/camera_launch.launch"/>
+
+	<node pkg="state_machines" type="setpoint_node.py" name="setpoint_node"/>
+
+</launch>

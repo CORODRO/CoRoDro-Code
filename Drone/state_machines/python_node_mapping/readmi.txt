@@ -1,0 +1,5 @@
+*************************************
+MappingStateMachine.py --> State Machine Configured and tested for the drone mapping phase
+try_subprocess.py --> Simple State Machine created to test the subprocess capabilities for MappingStateMachine.py
+try_subprocess_2.py --> Simple State Machine created to test the subprocess capabilities for MappingStateMachine.py opening and closing launch files in different states.
+**************************************
